@@ -1,0 +1,4 @@
+;function BannerShow(params,result){let mobile=false;let desktop=false;let link='';if(result.LINK&&result.PIC_SRC){desktop=BX.create('a',{'attrs':{'href':result.LINK}});link=BX.append(BX.create('img',{'attrs':{'src':result.PIC_SRC}}),desktop);}
+if(result.LINK_MOB&&result.PIC_SRC_MOB){mobile=BX.create('a',{'attrs':{'href':result.LINK_MOB}});link=BX.append(BX.create('img',{'attrs':{'src':result.PIC_SRC_MOB}}),mobile);}
+$(window).resize(function(){BannerAction(mobile,desktop);});BannerAction(mobile,desktop);}
+function BannerAction(mobile,desktop){if($(window).width()<550){if(mobile){$('.j-banner').show();$('.j-banner').html(mobile)}else{$('.j-banner').hide();}}else{if(desktop){$('.j-banner').show();$('.j-banner').html(desktop)}else{$('.j-banner').hide();}};};;$('.news-slider').bxSlider({slideSelector:'.news-block',minSlides:4,maxSlides:4,moveSlides:1,slideWidth:305,slideMargin:20,nextSelector:'.slider-next-2',prevSelector:'.slider-prev-2'});;;;

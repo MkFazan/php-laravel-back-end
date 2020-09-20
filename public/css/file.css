@@ -1,0 +1,221 @@
+.overinfo {
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999999;
+    font-size: 15px;
+    display: none;
+}
+.overinfo.active {
+    display: block !important;
+}
+#oinfo .binfo {
+    margin: 15px auto;
+}
+#oinfo .binfo table{
+    margin: 15px auto;
+    width: 100%;
+}
+#oinfo .binfo td{
+    padding: 5px 10px;
+    border: 1px solid #d4caca;
+}
+#oinfo .binfo td:first-child{
+    width: 60%;
+    background: #efefef;
+}
+#oinfo .binfo td:last-child{
+    width: 40%;
+    font-weight: bold;
+}
+#oinfo {
+    max-width: 612px;
+    width: 100%;
+    padding: 50px;
+    position: absolute;
+    font-family: 'proxima-nova', sans-serif;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    background: rgb(255, 255, 255);
+    z-index: 999999999;
+    display: none;
+}
+#oinfo.active {
+    display: block !important;
+}
+
+#oinfo .oititle {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#oinfo #oitab {
+    display: none;
+}
+
+#oinfo #oitab table {
+    margin-top: 20px;
+}
+
+#oinfo input {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    border-radius: 2px;
+    margin-top: 20px;
+}
+
+#oinfo a {
+    color: #53a94b;
+    text-decoration: underline;
+}
+
+#oinfo ul {
+    list-style-type: none;
+}
+
+#oinfo button {
+    width: 100%;
+    padding: 20px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 20px;
+    background: #ffca2a;
+    border: none;
+    border-radius: 2px;
+    transition: 1s all ease;
+}
+
+#oinfo button:disabled {
+    background: #909090;
+}
+
+#oinfo .green {
+    color: #53a94b;
+}
+
+#oinfo .black {
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#oinfo .grey {
+    color: #909090;
+}
+
+#oinfo .oiin .oititle {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+#oinfo ul li {
+    margin-bottom: 20px;
+}
+
+#oinfo .oiin {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+#oinfo .oifoo {
+    display: flex;
+}
+
+#oinfo .oifoo div {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+#oinfo .oifoo div:last-child {
+    border-left: 1px solid #dcdcdc;
+    padding-left: 20px;
+    min-height: 100%;
+}
+
+#oinfo .oifoo ul li {
+    margin-bottom: 10px !important;
+}
+
+.error {
+    color: red;
+    padding: 5px;
+    height: 30px;
+}
+
+#oitab table {
+    width: 100%;
+}
+
+#oitab thead tr {
+    border-top: 1px solid #909090;
+    border-bottom: 1px solid #909090;
+    color: #909090;
+}
+
+#oitab td {
+    padding: 10px;
+}
+
+#oitab tr {
+    border-bottom: 1px solid #909090;
+}
+#oinfo .close {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+}
+#oinfo .close:hover {
+    opacity: 1;
+}
+#oinfo .close:before, #oinfo .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+    display: block;
+}
+#oinfo .close:before {
+    transform: rotate(45deg);
+}
+#oinfo .close:after {
+    transform: rotate(-45deg);
+}
+
+
+
+@media (max-width: 824px) {
+    #oinfo {
+        right: 0;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #oitab table td {
+        width: 100%;
+        float: left;
+        text-align: right;
+        border-bottom: 1px dotted #909090;
+    }
+    #oitab table thead{
+        display: none;
+    }
+    #oitab table td:before {
+        content: attr(data-label);
+        float: left;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}
